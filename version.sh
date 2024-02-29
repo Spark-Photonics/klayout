@@ -2,7 +2,7 @@
 # This script is sourced to define the main version parameters
 
 # The main version
-KLAYOUT_VERSION="0.28.5"
+KLAYOUT_VERSION="0.28.5 - Spark"
 
 # The version used for PyPI (don't use variables here!)
 KLAYOUT_PYPI_VERSION="0.28.5"

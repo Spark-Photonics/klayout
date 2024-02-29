@@ -109,14 +109,14 @@ scripts=$pwd/scripts
 plugins="audio generic iconengines imageformats platforms printsupport sqldrivers styles"
 
 # read the current version
-. ./version.sh
+# . ./version.sh
 
 echo "------------------------------------------------------------------"
 echo "Running build for architecture $arch .."
 echo ""
 echo "  target     = $target"
 echo "  build      = $build"
-echo "  version    = $KLAYOUT_VERSION"
+# echo "  version    = $KLAYOUT_VERSION"
 echo "  build args = $KLAYOUT_BUILD_ARGS"
 echo "  suffix     = $KLAYOUT_BUILD_SUFFIX"
 echo ""
@@ -278,8 +278,8 @@ echo "Making .zip file $zipname.zip .."
 rm -rf $zipname $zipname.zip
 mkdir $zipname
 cp -Rv *.dll .*-paths.txt db_plugins lay_plugins $plugins lib $zipname | sed -u 's/.*/echo -n ./' | sh
-cp klayout.exe $zipname/klayout_app.exe
-cp klayout.exe $zipname/klayout_vo_app.exe
+cp klayout.exe $zipname/klayout_app_spark.exe
+cp klayout.exe $zipname/klayout_vo_app_spark.exe
 echo ""
 
 zip -r $zipname.zip $zipname
